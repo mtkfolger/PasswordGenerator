@@ -1,11 +1,3 @@
-# PasswordGenerator
-This application is a random, secure Password Generator
-
-Link to deployed application: 
-
-Screenshot of depoloyed application: 
-
-
 # 03 JavaScript: Password Generator
 
 ## Your Task
@@ -26,7 +18,6 @@ SO THAT I can create a strong password that provides greater security
 
 ```
 GIVEN I need a new, secure password
-
 <!-- NOT DONE -->
 1. WHEN I click the button to generate a password
   THEN I am presented with a series of prompts for password criteria
