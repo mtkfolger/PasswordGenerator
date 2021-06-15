@@ -29,8 +29,7 @@ function generatePassword () {
   upperCase = confirm ("Do you want to include uppercase letters in your password?");
 
   special = confirm ("Do you want to include special characters in your password?");
-
-
+};
 
 //minimum amount of each should be 0
 
@@ -43,7 +42,31 @@ var minimumUpperCase = "";
 var minimumSpecialCharacters = "";
 
 //functions to actually generate the password
+let randomFunctions = [];
+    if (numbers === true) {
+        randomFunctions.push(functionArray.getNumbers);
+    }
+
+    if (lowerCase === true) {
+        randomFunctions.push(functionArray.getLowerCases);
+    }
+
+    if(upperCase === true) {
+        randomFunctions.push(functionArray.getUpperCases);
+    }
+
+    if(special === true) {
+        randomFunctions.push(functionArray.getSpecialCharacters);
+    }
+    
+  console.log(randomFunctions);
+
+
 var functionArray = {
+
+  getPasswordLength: function() {
+    return passwordLength;
+  },  
   getNumbers: function() {
     return String.fromCharCode(Math.floor(Math.random()* 10) + 48);
   },
@@ -62,9 +85,11 @@ var functionArray = {
 
 };
 
+console.log (functionArray);
+
 //Check to ensure user selected ok for all prompts and uses empty minimums from above
 
-if(numbers === true) {
+/*if(numbers === true) {
   minimumNumbers = functionArray.getNumbers();
   minimumCount ++;
 };
@@ -82,7 +107,7 @@ if (upperCase === true) {
 if (special === true) {
   minimumSpecialCharacters = functionArray.getSpecialCharacters();
   minimumCount ++;
-};
+}; */
 
 //create an empty string variable in which to populate the password
 
@@ -106,23 +131,21 @@ function getPassword() {
   return randomlyGeneratedPassword
 };
 
-function errorValidation (){
-  if (numbers ===false) {
+/* function errorValidation (){
+  if (numbers /=true) {
   alert ("Error: You must select at least one type of character!")
 }
 
-if (lowerCase ===false) {
+if (lowerCase /=true) {
   alert ("Error: You must select at least one type of character!")
 }
 
-if (upperCase ===false) {
+if (upperCase /=true) {
   alert ("Error: You must select at least one type of character!")
 }
 
-if (special ===false) {
+if (special /=true) {
   alert ("Error: You must select at least one type of character!")
 }
 };
-
-return getPassword()
-}
+*/
