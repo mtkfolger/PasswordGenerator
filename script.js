@@ -18,6 +18,16 @@ function createPassword() {
       passwordText.value = password;
 }
 
+//get a bunch of user data
+//keep that data for reference later
+
+//passwordOptions
+//length
+//upper
+//lower
+//number
+//special
+
 //prompts for user input
 function generatePassword () {
   passwordLength = prompt("Please enter the number of characters (between 8 and 128) that you would like in your password:");
@@ -133,9 +143,13 @@ for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
 //Ensure all characters are added to the password
 
 randomlyGeneratedPassword += minimumNumbers;
+console.log("Password 0", randomlyGeneratedPassword)
 randomlyGeneratedPassword += minimumLowerCase;
+console.log("Password 1", randomlyGeneratedPassword)
 randomlyGeneratedPassword += minimumUpperCase;
+console.log("Password 3", randomlyGeneratedPassword)
 randomlyGeneratedPassword += minimumSpecialCharacters;
+console.log("Password 4", randomlyGeneratedPassword)
 
 function getPassword() {
   return randomlyGeneratedPassword
