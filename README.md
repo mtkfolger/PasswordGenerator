@@ -5,4 +5,4 @@ Link to deployed application: https://mtkfolger.github.io/PasswordGenerator/
 
 Screenshot of deployed application: ![Capture](https://user-images.githubusercontent.com/84151997/122151912-639d4200-ce2e-11eb-8ace-1b090c89cfb1.JPG)
 
-
+Languages Used: HTML, CSS, JavaScript
